@@ -223,10 +223,22 @@ body {
   align-items: center;
 }
 
+.organizacao {
+  display: flex;
+  align-items: center;
+}
+
 .sidebar > .usuario img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+}
+
+.usuario img{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
 }
 
 .sidebar > .usuario .texto {
@@ -236,6 +248,20 @@ body {
   font-weight: 300;
   color: #8E8E8E;
 }
+
+.usuario .texto{
+  display: flex;
+  flex-direction: column;
+  margin-left: 14px;
+  font-weight: 300;
+  color: #8E8E8E;
+}
+
+.usuario .texto strong{
+  font-weight: 500;
+  color: #262626;
+}
+
 
 .sidebar > .usuario .texto strong {
   font-weight: 500;
