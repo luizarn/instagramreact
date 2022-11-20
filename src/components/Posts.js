@@ -1,9 +1,10 @@
+import { useState } from "react"
 
 export default function Posts() {
 
   const posts = [
     { imagemUsuario: "assets/img/meowed.svg", nome: "meowed", imagemPost: "assets/img/gato-telefone.svg", perfilCurtida: "assets/img/respondeai.svg", textoCurtida: "Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>" },
-    { imagemUsuario: "assets/img/barked.svg", nome: "barked", imagemPost: "assets/img/dog.svg", perfilCurtida: "assets/img/adorable_animals.svg", textoCurtida: "Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>" }
+    { imagemUsuario: "assets/img/barked.svg", nome: "barked", imagemPost: "assets/img/dog.svg", perfilCurtida: "assets/img/adorable_animals.svg", textoCurtida: "Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>"}
   ]
 
   return (
@@ -14,6 +15,10 @@ export default function Posts() {
 }
 
 function Post(props) {
+const iconePadrao = "bookmark-outline" 
+const [icone, setIcone] = useState(iconePadrao)
+
+
   return (
     <div class="post">
       <div class="topo">
@@ -38,7 +43,7 @@ function Post(props) {
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
             <div>
-              <ion-icon name="bookmark-outline"></ion-icon>
+              <ion-icon name={icone} onClick={() => setIcone("bookmark")}></ion-icon>
             </div>
           </div>
 
