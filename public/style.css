@@ -262,20 +262,24 @@ body {
   color: #262626;
 }
 
+.sugestao .texto{
+  font-weight: 500;
+  color: #262626;
+}
 
 .sidebar > .usuario .texto strong {
   font-weight: 500;
   color: #262626;
 }
 
-.sidebar .sugestoes .titulo {
+.sugestoes .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 14px;
 }
 
-.sidebar .sugestoes .sugestao {
+.sugestoes .sugestao {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -426,6 +430,8 @@ ion-icon {
   margin-left: 5px;
 }
 
-.oi {
-  background-color: red;
+.coracao-vermelho{
+ color:red;
 }
+
+

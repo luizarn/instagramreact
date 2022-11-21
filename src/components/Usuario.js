@@ -4,8 +4,9 @@ import { useState } from "react";
 
 export default function Usuario() {
 const imagemPadrao = "assets/img/catanacomics.svg"
+const usuarioPadrao = "Catana"
 const [imagem, setImagem] = useState(imagemPadrao)
-const [usuario, setUsuario] = useState("Catana")
+const [usuario, setUsuario] = useState(usuarioPadrao)
 
 
 function mudarUsuario() {
@@ -22,20 +23,21 @@ setImagem(imagemAdicionada)
 
   return (
     <div class="usuario">
-     <User imagem={!imagem ? imagemPadrao : imagem} usuario={!usuario ? usuario : usuario}/>
+     <User imagem={!imagem ? imagemPadrao : imagem} usuario={!usuario ? usuarioPadrao : usuario}/>
     </div>
   )
 
 
 function User(props) {
   return (
-    <div class="organizacao">
-      <img onClick={mudarImagem} src={props.imagem} />
+    <div class="organizacao" data-test="user">
+      <img onClick={mudarImagem} src={props.imagem} data-test="profile-image"/>
       <div class="texto">
         <strong>catanacomics</strong>
         <span>
-          {props.usuario}
-          <ion-icon name="pencil" onClick={mudarUsuario}></ion-icon>
+          <span data-test="name">{props.usuario}</span>
+         
+          <ion-icon name="pencil" onClick={mudarUsuario} data-test="edit-name"></ion-icon>
         </span>
       </div>
     </div>
