@@ -52,6 +52,15 @@ function Post(props) {
     }
   }
 
+  function salvarPost(){
+    if (icone === iconePadrao) {
+      setIcone("bookmark")
+
+    } else {
+      setIcone("bookmark-outline")
+    }
+  }
+
 
 
   return (
@@ -78,7 +87,7 @@ function Post(props) {
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div>
-            <ion-icon name={icone} onClick={() => setIcone("bookmark")} data-test="save-post"></ion-icon>
+            <ion-icon name={icone} onClick={salvarPost} data-test="save-post"></ion-icon>
           </div>
         </div>
 
